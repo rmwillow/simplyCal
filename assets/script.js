@@ -1,15 +1,17 @@
 $(document).ready(function() {
 
+
     //Setting up the date and appending to the HTML page
     var today = moment().format('MMMM Do YYYY');
     console.log(today)
     $(".todaysDate").append(today);
 
 
-    // hh is 24 hours time
-    //parse integer from moment string
+    // hh is 12 hours time
+
     var currentTime = parseInt(moment().format('HH'));
     console.log(currentTime)
+
 
 
     //set variable to equal id name from html
@@ -52,20 +54,34 @@ $(document).ready(function() {
     })
 
 
-    // setting each items in the local storage
-    $("button").on("click", function() {
+    // setting each items in the local storage with new labels to more clear in local storage output
 
-        localStorage.setItem("6AM", (timeSlot6.val()))
-        localStorage.setItem("7AM", (timeSlot7.val()))
-        localStorage.setItem("8AM", (timeSlot8.val()))
-        localStorage.setItem("9AM", (timeSlot9.val()))
-        localStorage.setItem("10AM", (timeSlot10.val()))
-        localStorage.setItem("11AM", (timeSlot11.val()))
-        localStorage.setItem("12AM", (timeSlot12.val()))
-        localStorage.setItem("1PM", (timeSlot1.val()))
-        localStorage.setItem("2PM", (timeSlot2.val()))
-        localStorage.setItem("3PM", (timeSlot3.val()))
-        localStorage.setItem("4PM", (timeSlot4.val()))
-        localStorage.setItem("5PM", (timeSlot5.val()))
-    })
+    $("button").on("click", function() {
+            localStorage.setItem("6 AM Task", (timeSlot6.val()))
+            localStorage.setItem("7 AM Task", (timeSlot7.val()))
+            localStorage.setItem(" AM Task", (timeSlot8.val()))
+            localStorage.setItem("9 AM Task", (timeSlot9.val()))
+            localStorage.setItem("10 AM Task", (timeSlot10.val()))
+            localStorage.setItem("11 AM Task", (timeSlot11.val()))
+            localStorage.setItem("12 AM Task", (timeSlot12.val()))
+            localStorage.setItem("1 PM Task", (timeSlot1.val()))
+            localStorage.setItem("2 PM Task", (timeSlot2.val()))
+            localStorage.setItem("3 PM Task", (timeSlot3.val()))
+            localStorage.setItem("4 PM Task", (timeSlot4.val()))
+            localStorage.setItem("5 PM Task", (timeSlot5.val()))
+        })
+        //getting the content stored and sending to the screen. When page is refreshed content will stay
+    $("#time6AM").append(localStorage.getItem("6 AM Task"));
+    $("#time7AM").append(localStorage.getItem("7 AM Task"));
+    $("#time8AM").append(localStorage.getItem("8 AM Task"));
+    $("#time9AM").append(localStorage.getItem("9 AM Task"));
+    $("#time10AM").append(localStorage.getItem("10 AM Task"));
+    $("#time11AM").append(localStorage.getItem("11 AM Task"));
+    $("#time12AM").append(localStorage.getItem("12 AM Task"));
+    $("#time1PM").append(localStorage.getItem("1 PM Task"));
+    $("#time2PM").append(localStorage.getItem("2 PM Task"));
+    $("#time3PM").append(localStorage.getItem("3 PM Task"));
+    $("#time4PM").append(localStorage.getItem("4 PM Task"));
+    $("#time5PM").append(localStorage.getItem("5 PM Task"));
+
 })

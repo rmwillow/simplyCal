@@ -17,6 +17,7 @@ p,
     font-family: 'Questrial', sans-serif;
     text-align: center;
     margin-top: 15px;
+    color: black;
 }
 
 .plannerDiv {
@@ -24,44 +25,20 @@ p,
     box-shadow: 2px black;
 }
 
-#text9AM {
-    border-radius: 5px;
-}
-
-#text10AM {
-    border-radius: 5px;
-}
-
-#text11AM {
-    border-radius: 5px;
-}
-
-#text12AM {
-    border-radius: 5px;
-}
-
-#text1PM {
-    border-radius: 5px;
-}
-
-#text2PM {
-    border-radius: 5px;
-}
-
-#text3PM {
-    border-radius: 5px;
-}
-
-#text4PM {
-    border-radius: 5px;
-}
-
+#text9AM,
+#text10AM,
+#text11AM,
+#text12AM,
+#text1PM,
+#text2PM,
+#text3PM,
+#text4PM,
 #text5PM {
     border-radius: 5px;
 }
 
 .headerDiv {
-    color: white;
+    color: black;
     font-family: 'Questrial', sans-serif;
 }
 
@@ -71,16 +48,25 @@ textarea p {
     box-shadow: inset 2px 2px 2px 0px #dddddd;
 }
 
+.fa-lock {
+    color: white;
+    font-size: 2.5em;
+}
+
+.btn {
+    background-color: rgb(81, 140, 228);
+}
+
 .bg-red {
-    background-color: rgb(255, 1, 1);
+    background-color: rgb(218, 148, 148);
 }
 
 .bg-green {
-    background-color: rgba(8, 131, 8, 0.788);
+    background-color: rgba(142, 189, 142, 0.788);
 }
 
 .bg-gray {
-    background-color: #cfdce9da;
+    background-color: #b8c3ceda;
 }
 
 
