@@ -13,6 +13,7 @@ $(document).ready(function() {
 
 
     //set variable to equal id name from html
+
     var timeSlot6 = $("#time6AM");
     var timeSlot7 = $("#time7AM");
     var timeSlot8 = $("#time8AM");
@@ -27,8 +28,8 @@ $(document).ready(function() {
     var timeSlot5 = $("#time5PM");
 
 
-    // selects all text area sections 
-    //.each call back iterates over each text area section
+    // selects all time area sections 
+    //.each call back iterates over each time area section
     $("textarea").each(function() {
         //converts string into integer
         //returns attr value of name
@@ -48,5 +49,23 @@ $(document).ready(function() {
             $(this).addClass("bg-red")
         }
 
+    })
+
+
+    // setting each items in the local storage
+    $("button").on("click", function() {
+
+        localStorage.setItem("6AM", (timeSlot6.val()))
+        localStorage.setItem("7AM", (timeSlot7.val()))
+        localStorage.setItem("8AM", (timeSlot8.val()))
+        localStorage.setItem("9AM", (timeSlot9.val()))
+        localStorage.setItem("10AM", (timeSlot10.val()))
+        localStorage.setItem("11AM", (timeSlot11.val()))
+        localStorage.setItem("12AM", (timeSlot12.val()))
+        localStorage.setItem("1PM", (timeSlot1.val()))
+        localStorage.setItem("2PM", (timeSlot2.val()))
+        localStorage.setItem("3PM", (timeSlot3.val()))
+        localStorage.setItem("4PM", (timeSlot4.val()))
+        localStorage.setItem("5PM", (timeSlot5.val()))
     })
 })
