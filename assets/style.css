@@ -1,71 +1,86 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1;
-}
-
-textarea{
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+    background-color: snow;
 }
 
 .jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+    background-size: cover;
 }
 
-.description{
-  white-space: pre-wrap;
+p,
+.lead,
+.todaysDate {
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    color: black;
 }
 
-.time-block{
-  text-align: center;
-  border-radius: 15px;
+.plannerDiv {
+    border-radius: 25px;
+    box-shadow: 2px black;
 }
 
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
+#text9AM,
+#text10AM,
+#text11AM,
+#text12AM,
+#text1PM,
+#text2PM,
+#text3PM,
+#text4PM,
+#text5PM {
+    border-radius: 5px;
 }
 
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+.headerDiv {
+    color: black;
+    font-family: 'Questrial', sans-serif;
 }
 
-.past {
-  background-color: #d3d3d3;
-  color: white;
+textarea p {
+    -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    box-shadow: inset 2px 2px 2px 0px #dddddd;
 }
 
-.present {
-  background-color: #ff6961;
-  color: white;
+.fa-lock {
+    color: white;
+    font-size: 2.5em;
 }
 
-.future {
-  background-color: #77dd77;
-  color: white;
+.btn {
+    background-color: rgb(81, 140, 228);
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
+.bg-red {
+    background-color: rgb(218, 148, 148);
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+.bg-green {
+    background-color: rgba(142, 189, 142, 0.788);
+}
+
+.bg-gray {
+    background-color: #b8c3ceda;
+}
+
+@media screen and (max-width: 767px) {
+    .jumbotron {
+        height: 300px;
+    }
+    p {
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .jumbotron {
+        height: 300px;
+    }
+    .hourC {
+        margin-right: 0px;
+    }
+    .spanBttn {
+        border-radius: 25px;
+    }
 }

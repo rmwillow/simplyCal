@@ -1,38 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simply Cal</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Header -->
+
+    <div class="jumbotron border-bottom  jumbotron-fluid headerDiv">
+        <div class="container text-center  ">
+            <h1 class="display-4">Work Day Scheduler </h1>
+            <p class="lead">A simple planner to keep you on track of your day!</p>
+            <p id="headP" class="lead todaysDate"></p>
+        </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+    <hr size="12" width="90%" color="black">
+
+
+    <!-- container for time slots -->
+    <div class="container text-right plannerDiv">
+
+        <div class="row row6">
+            <div class="input-group input-container col-1">
+                <p class="border-bottom">6am</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time6AM class="form-control custom-control textborder" rows="2" style="resize:none" name="6"></textarea>
+                <button class="col-1 btn">
+                      <span ><i class="fas fa-lock"></i></span>
+                    </button>
+            </div>
+        </div>
+        <div class="row row7">
+            <div class="input-group input-container col-1">
+                <p class="border-bottom">7am</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time7AM class="form-control custom-control textborder" rows="2" style="resize:none" name="7"></textarea>
+                <button class="col-1 btn">
+                      <span ><i class="fas fa-lock"></i></span>
+                    </button>
+            </div>
+        </div>
+        <div class="row row8">
+            <div class="input-group input-container col-1">
+                <p class="border-bottom">8am</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time8AM class="form-control custom-control textborder" rows="2" style="resize:none" name="8"></textarea>
+                <button class="col-1 btn">
+                      <span ><i class="fas fa-lock"></i></span>
+                    </button>
+            </div>
+        </div>
+        <div class="row row9">
+            <div class="input-group input-container col-1">
+                <p class="border-bottom">9am</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time9AM class="form-control custom-control textborder" rows="2" style="resize:none" name="9"></textarea>
+                <button class="col-1 btn">
+                      <span ><i class="fas fa-lock"></i></span>
+                    </button>
+            </div>
+        </div>
+        <div class="row row10">
+            <div class="input-group input-container col-1">
+                <p class="border-bottom">10am</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time10AM class="form-control custom-control textborder" rows="2" style="resize:none" name="10"></textarea>
+                <button class="col-1 btn">
+                  <span ><i class="fas fa-lock"></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="row row11">
+            <div class="input-group col-1">
+                <p class="border-bottom">11am</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time11AM class="form-control custom-control textborder" rows="2" style="resize:none" name="11"></textarea>
+                <button class="col-1 btn">
+                  <span ><i class="fas fa-lock"></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="row row12">
+            <div class="input-group col-1">
+                <p class="border-bottom">12am</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time12AM class="form-control custom-control textborder" rows="2" style="resize:none" name="12"></textarea>
+                <button class="col-1 btn">
+                  <span ><i class="fas fa-lock"></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="row row13">
+            <div class="input-group col-1">
+                <p class="border-bottom">1pm</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time1PM class="form-control custom-control textborder" rows="2" style="resize:none" name="13"></textarea>
+                <button class="col-1 btn">
+                  <span ><i class="fas fa-lock"></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="row row14">
+            <div class="input-group col-1">
+                <p class="border-bottom">2pm</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time2PM class="form-control custom-control textborder" rows="2" style="resize:none" name="14"></textarea>
+                <button class="col-1 btn">
+                  <span ><i class="fas fa-lock"></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="row row15">
+            <div class="input-group col-1">
+                <p class="border-bottom">3pm</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time3PM class="form-control custom-control textborder" rows="2" style="resize:none" name="15"></textarea>
+                <button class="col-1 btn">
+                  <span ><i class="fas fa-lock"></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="row row16">
+            <div class="input-group col-1">
+                <p class="border-bottom">4pm</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time4PM class="form-control custom-control textborder" rows="2" style="resize:none" name="16"></textarea>
+                <button class="col-1 btn">
+                  <span ><i class="fas fa-lock"></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="row row17 ">
+            <div class="input-group col-1">
+                <p class="border-bottom">5pm</p>
+            </div>
+            <div class="input-group col-10 form-group">
+                <textarea id=time5PM class="textborder form-control custom-control" rows="2" style="resize:none" name="17"></textarea>
+                <button class="col-1 btn">
+                  <span ><i class="fas fa-lock"></i></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/9b22d73af0.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="./assets/script.js"></script>
+</body>
+
 </html>
